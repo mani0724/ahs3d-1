@@ -64,7 +64,7 @@ body {
 }
 
 a {
-  color: #1883b7;
+  color: #000;
   -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
   -ms-transition: color 0.3s ease;
@@ -86,10 +86,13 @@ section {
 img {
   max-width: 100%;
 }
+.do{
+  color: ;
+}
 .dot {
   height: 10px;
   width: 10px;
-  background-color: #bbb;
+  background-color: #141313;
   border-radius: 50%;
   display: inline-block;
    margin-right: 10px;
@@ -1048,9 +1051,7 @@ select {
    Background & Colors
 --------------------------*/
 /* Colors */
-.color-white {
-  color: #ffffff !important;
-}
+
 
 .color-gray {
   color: #f9f9f9 !important;
@@ -1124,15 +1125,15 @@ select {
 }
 
 .bg-overlay-4:before {
-  background-color: rgba(27, 26, 26, 0.75);
+  background-color: rgba(122, 115, 115, 0.75);
 }
 
 .bg-overlay-theme:before {
-  background-color: #1883b7;
+  background-color: #adf3f8;
 }
 
 .bg-overlay-theme-2:before {
-  background-color: #1883b7;
+  background-color:#baf3f7;
 }
 
 .bg-overlay-gradient:before {
@@ -3782,7 +3783,7 @@ textarea.form-control {
     Footer
 --------------------------*/
 .footer {
-  background-color: #000;
+  background-color: #fff;
 }
 
 .footer-top {
@@ -3791,7 +3792,7 @@ textarea.form-control {
 }
 
 .footer__widget-title {
-  color: #ffffff;
+  color: #000;
   font-size: 18px;
   text-transform: capitalize;
   line-height: 1;
@@ -3807,7 +3808,7 @@ textarea.form-control {
 }
 
 .footer__widget-content p {
-  color: #f9f9f9;
+  color: #000;
 }
 
 .footer__widget-content .social__icons a {
@@ -3864,7 +3865,7 @@ textarea.form-control {
 .footer__widget-nav ul li a {
   display: block;
   position: relative;
-  color: #f9f9f9;
+  color: #000;
   font-size: 14px;
   line-height: 33px;
 }
@@ -5470,15 +5471,6 @@ textarea.form-control {
   font-size: 13px;
   color: #616161;
   margin-bottom: 0;
-}
-
-.testimonials-white .testimonial-item .testimonial__desc,
-.testimonials-white .testimonial__meta .testimonial__meta-title {
-  color: #ffffff;
-}
-
-.testimonials-white .testimonial__meta .testimonial__meta-desc {
-  color: #f9f9f9;
 }
 
 .testimonials-layout2 .testimonials-panel-wrap {
