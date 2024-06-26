@@ -2,557 +2,1164 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description" content="AHS3D - Engineering">
-  <link href="assets/images/favicon/favicon.png" rel="icon">
-<title>AHS3D - Engineering</title>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Heebo:400,500,700%7cRajdhani:400,500,600,700&display=swap">
-  <link rel="stylesheet" href="assets/css/libraries.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AHS3D">
+
+    <!-- ========== Page Title ========== -->
+    <title>Ahs3d</title>
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="assets/css/elegant-icons.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5/html5shiv.min.js"></script>
+      <script src="assets/js/html5/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ========== Google Fonts ========== -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<style>
+    
+
+
+.clients {
+  padding: 80px 0;
+}
+.box {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  width: 77%;
+  height: auto;
+  transition: transform 0.5s ease-in;
+  margin: 8px auto;
+}
+.box img {
+  max-width: 70%;
+  max-height: 70%;
+  width: 70%;
+}
+.box:hover {
+  transform: scale(1.2);
+}
+    .review {
+    display: flex;
+    align-items: center;
+    font-size: 16px; /* Adjust size as needed */
+    padding: 10px;
+}
+
+.rating {
+    color: #FFD700; /* Star color */
+    font-size: 20px; /* Adjust size as needed */
+    align-items: center;
+}
+.rating-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    margin-right: 10px; /* Add margin to separate from text */
+}
+
+.text {
+    margin-left: 10px;
+    flex: 1;
+    word-break: break-word; /* Ensure text wraps on smaller screens */
+}
+</style>
 </head>
 
 <body>
-  <div class="wrapper">
-    <!-- =========================
-        Header
-    =========================== -->
-    <header id="header" class="header header-layout1">
-      <div class="header__promo-text text-center">
-        <strong>Need Help:</strong><span>Providing Innovative and Sustainable Solutions, Call  <a href="tel:+91 9900084339">+91 9900084339</a></span>
-      </div><!-- /.header__promo-text -->
-      <nav class="navbar navbar-expand-lg sticky-navbar">
-        <div class="container-fluid px-0">
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo/logo-light.png" class="logo-light" alt="logo">
-            <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo">
-          </a>
-          <button class="navbar-toggler" type="button">
-            <span class="menu-lines"><span></span></span>
-          </button>
-          <div class="collapse navbar-collapse" id="mainNavigation">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav__item with-dropdown">
-                <a href="index.html" class="nav__item-link active">Home</a>
+
+
+
+    <!-- Start Header Top 
+    ============================================= -->
+    <div class="top-bar-area inline inc-border" style="width: 100%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 address-info text-left">
+                    <div class="info box">
+                        <ul>
                 
-               <!-- /.dropdown-menu -->
-              </li>
-              <li class="nav__item">
-                <a href="about-us.html" class="nav__item-link">About Us</a>
-              </li>
-             <!-- /.nav-item -->
-              <li class="nav__item with-dropdown">
-                <a href="#" class="dropdown-toggle nav__item-link">Services</a>
-                <i class="fa fa-angle-right" data-toggle="dropdown"></i>
-                <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="dimensional.html" class="nav__item-link">Dimensional Inspection</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="reverse.html" class="nav__item-link">Reverse Engineering</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="training.html" class="nav__item-link">Training</a></li>
-                  <!-- /.nav-item -->
-                  <li class="nav__item"><a href="Analyse.html" class="nav__item-link">CT Analysis</a>
-                  </li>
-                </ul><!-- /.dropdown-menu -->
-              </li><!-- /.nav-item -->
-            <!-- /.nav-item -->
-              <!-- /.nav-item -->
-              <!-- /.nav-item -->
-              <li class="nav__item">
-                <a href="gallery.html" class="nav__item-link">Gallery</a>
-              </li>
-              <li class="nav__item">
-                <a href="contact.html" class="nav__item-link">Contact Us</a>
-              </li><!-- /.nav-item -->
-            </ul><!-- /.navbar-nav -->
-          </div><!-- /.navbar-collapse -->
-          <div class="navbar-modules">
-            <ul class="list-unstyled d-flex align-items-center modules__btns-list">
-              <li class="d-none d-lg-block">
-                <a href="contact.html" class="btn btn__secondary module__btn-request">
-                  <span>Request A Quote</span><i class="icon-arrow-right"></i>
-                </a>
-              </li>
-            
-            </ul><!-- /.modules-wrapper -->
-          </div><!-- /.navbar-modules -->
-        </div><!-- /.container -->
-      </nav><!-- /.navabr -->
-    </header><!-- /.Header -->
-
-    <!-- ============================
-        Slider
-    ============================== -->
-    <section id="slider1" class="slider slider-1">
-      <div class="carousel owl-carousel carousel-arrows carousel-dots" data-slide="1" data-slide-md="1"
-        data-slide-sm="1" data-autoplay="false" data-nav="true" data-dots="true" data-space="0" data-loop="true"
-        data-speed="3000" data-transition="fade" data-animate-out="fadeOut" data-animate-in="fadeIn">
-        <div class="slide-item align-v-h bg-overlay bg-overlay-3">
-          <div class="bg-img"><img src="assets/images/AHS/index.jpg" alt="slide img"></div>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
-                <div class="slide__content">
-                  <span class="slide__subtitle" style="color: #fff;">3D Scanning–Industrial Applications
-                </span>
-                  <h2 class="slide__title">Driven By Quality</h2>
-              
-                  <a href="about-us.html" class="btn btn__primary mr-30">Read More </a>
-                  <a href="dimensional.html" class="btn btn__white">Our Services</a>
-                </div><!-- /.slide-content -->
-              </div><!-- /.col-xl-8 -->
-            </div><!-- /.row -->
-          </div><!-- /.container -->
-        </div><!-- /.slide-item -->
-        <div class="slide-item align-v-h bg-overlay bg-overlay-3">
-          <div class="bg-img"><img src="assets/images/AHS/index2.jpg"  alt="slide img"></div>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
-                <div class="slide__content">
-                  <span class="slide__subtitle" style="color: #fff;">High precision for demanding application</span>
-                  <h2 class="slide__title">Serve As Consultants For All Industris</h2>
-            
-                  <a href="contact.html" class="btn btn__white mr-30">Contact Us</a>
-                </div><!-- /.slide-content -->
-              </div><!-- /.col-xl-8 -->
-
-            </div><!-- /.row -->
-          </div><!-- /.container -->
-        </div><!-- /.slide-item -->
-        <div class="slide-item align-v-h bg-overlay bg-overlay-3">
-          <div class="bg-img"><img src="assets/images/AHS/index3.jpg" alt="slide img"></div>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
-                <div class="slide__content">
-                  <span class="slide__subtitle" style="color: #fff;">Reverse Engineering</span>
-                  <h2 class="slide__title">Manufacture A High Quality Products</h2>
-    
-                  <a href="gallery.html" class="btn btn__primary btn__hover2 mr-30">Our Gallery</a>
-                </div><!-- /.slide-content -->
-              </div><!-- /.col-xl-8 -->
-            </div><!-- /.row -->
-          </div><!-- /.container -->
-        </div><!-- /.slide-item -->
-      </div><!-- /.carousel -->
-    </section><!-- /.slider -->
-
-    <!-- ========================
-      About Layout 2
-    =========================== -->
-    <section id="aboutLayout2" class="about about-layout2">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9 offset-xl-1">
-            <div class="heading heading-3 mb-50">
- 
-             
-            </div><!-- /heading -->
-          </div><!-- /.col-xl-9 -->
-        </div><!-- /.row -->
-        <div class="row">
-          <div class="col-sm-12 col-md-10 col-lg-6 col-xl-5">
-            <div class=" mb-50">
-              <img src="assets/images/AHS/aaaa.png" alt="about" class="img-fluid">
-           
-            </div><!-- /.about-img -->
-          </div><!-- /.col-xl-5 -->
-          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-5">
-            <div class="about__text">
-               <h4 class="heading__title">About Us 
-              </h4>
-              <p>We are based out in Bangalore started in 2018. We Aim to fill the gap in current inspection & Engineering technologies. We have expertise in creating inspection reports, CAD Design, CAD models comparison from 3D scanned data to actual product using inspection software;</p>
-        
+                            <li>
+                                       <i class="fas fa-envelope-open"></i> <a href="mailto:Info@3dengg.in">Info@3dengg.in</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i><a href="tel:+919900084339">+91 99000 84339 </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 social text-right">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <ul class="list-items list-items-layout2 list-unstyled mb-30">
-              <li>3D Scanning–Industrial Applications</li>
-              <li>Reverse Engineering</li>
-              <li>High precision for demanding application</li>
-              <li>Surface Roughness Tester</li>
-              <li>Contour Profile Measurement</li>
-              <li>High precision for demanding application</li>
-            </ul>
-            <div class="about__signature mb-30">
-              <a href="about-us.html" class="btn btn__primary btn__bordered mr-40">More About Us</a>
-           
+        </div>
+    </div>
+    <!-- End Header Top -->
+
+
+    <!-- Header 
+    ============================================= -->
+    <header id="home">
+
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default attr-border navbar-sticky bootsnav">
+
+            <!-- Start Top Search -->
+            <div class="container">
+                <div class="row">
+                    <div class="top-search">
+                        <div class="input-group">
+                            <form action="#">
+                                <input type="text" name="text" class="form-control" placeholder="Search">
+                                <button type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>  
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div><!-- /.col-xl-4 -->
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-2">
-            <div class="row">
-              <div class="col-sm-6 col-md-6 col-lg-6 col-xl-12">
-                <div class="counter-item">
-                  <h4 class="counter">6,154</h4>
-                  <p class="counter__desc">portfolio Completed In The Last 5 Years</p>
-                </div><!-- /.counter-item -->
-                <div class="divider__line d-none d-xl-block mb-40"></div>
-              </div> <!-- /.col-lg-12 -->
-              <div class="col-sm-6 col-md-6 col-lg-6 col-xl-12">
-                <div class="counter-item">
-                  <h4 class="counter">2,194</h4>
-                  <p class="counter__desc">Happy Customers Who Trusted Us</p>
-                </div><!-- /.counter-item -->
-              </div> <!-- /.col-lg-12 -->
-            </div><!-- /.row -->
-          </div><!-- /.col-xl-2 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.About Layout 2 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <div class="features-list mb-30">
-     
-                <div class="feature-item feature-list-item">
-                  <div class="feature__content">
-                    <h4 class="feature__title">Driven By Quality</h4>
-                    <p class="feature__desc">We work across the spectrum of industry to solve quality challenges and help companies grow with capacity and capability by providing engineering services i.e. 3D Scanning, Dimensional inspection, CT Analysis, Reverse engineering, Roughness Testing, Contour Profile Measurement.</p>
-                  </div><!-- /.feature-content -->
-                </div><!-- /.feature-item -->
-                <div class="feature-item feature-list-item">
-                  <div class="feature__content">
-                    <h4 class="feature__title">Get it done from the best</h4>
-                    <p class="feature__desc">We have the best Industry experts working in our company,who can help you in each and every step of Metrolgy,Reverse Engineering, Design & other related activities A great opportunity to learn from best of the industry expert.</p>
-                  </div><!-- /.feature-content -->
-                </div><!-- /.feature-item -->
-                <div class="feature-item feature-list-item">
-                  <div class="feature__content">
-                    <h4 class="feature__title">AHS3D Engineering Services</h4>
-                    <p class="feature__desc">We provide Engineering Service to customers around the globe who are developing, expanding and supplementing their quality and engineering resources. We help customers to bring quality with robust design at least cost.</p>
-                  </div><!-- /.feature-content -->
-                </div><!-- /.feature-item -->
-         <!-- /.row -->
-          </div><!-- /.features-list-layout3 -->
-        </div><!-- /.col-lg-12 -->
-      </div>
-    </div><!-- /.row -->
-    <!-- =====================
-         Clients 
-      ======================== -->
-    <section id="clients" class="clients border-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="carousel owl-carousel" data-slide="6" data-slide-md="4" data-slide-sm="2" data-autoplay="true"
-              data-nav="false" data-dots="false" data-space="20" data-loop="true" data-speed="700">
-              <div class="client">
-                <a href="#"><img src="assets/images/AHS/160 x 100.png" alt="client"></a>
-              </div><!-- /.client -->
-              <div class="client">
-                <a href="#"><img src="assets/images/AHS/160 x 100 2.png" alt="client"></a>
-              </div><!-- /.client -->
-              <div class="client">
-                <a href="#"><img src="assets/images/AHS/160 x 100 3.png" alt="client"></a>
-              </div><!-- /.client -->
-              <div class="client">
-                <a href="#"><img src="assets/images/AHS/160 x 100 4.png" alt="client"></a>
-              </div><!-- /.client -->
-              <div class="client">
-                <a href="#"><img src="assets/images/AHS/160 x 100 5.png" alt="client"></a>
-              </div><!-- /.client -->
-              <div class="client">
-                <a href="#"><img src="assets/images/AHS/160 x 100 6.png" alt="client"></a>
-              </div><!-- /.client -->
-            </div><!-- /.carousel -->
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.clients  -->
+            <!-- End Top Search -->
 
+            <div class="container">
 
+                  <!-- Start Atribute Navigation -->
+                  <div class="attr-nav">
+                    <ul>
+                        <li class="quote-btn" ><a href="#" style="background-color: #f7c02d;">Get A Quote</a></li>
+                    </ul>
+                </div>        
+                <!-- End Atribute Navigation -->
 
-    <!-- ========================
-        Services Carousel
-    =========================== -->
-    <section id="servicesCarousel" class="services services-layout2 services-carousel pt-0 mt-120">
-      <div class="bg-img"><img src="assets/images/backgrounds/pattern/2.png" alt="background"></div>
-      <div class="container">
-        <div class="row heading mb-40">
-          <div class="col-sm-12 col-md-12 col-lg-6">
-            <span class="heading__subtitle">Our Services</span>
-            <h2 class="heading__title">Provides High Performance Services For Multiple Industries And Technologies!</h2>
-          </div><!-- /.col-lg-6 -->
-          <div class="col-sm-12 col-md-12 col-lg-6">
-     
-          </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <div class="carousel owl-carousel carousel-dots" data-slide="3" data-slide-md="2" data-slide-sm="1"
-            data-autoplay="true" data-nav="false" data-dots="true" data-space="30" data-loop="true" data-speed="800">
-            <div class="service-item">
-              <div class="service__content">
-                <div class="service__icon">
-                  <img src="assets/images/AHS/dimemsional.jpg" alt="client">
-                </div><!-- /.service__icon -->
-                <h4 class="service__title">Dimensional Inspection</h4>
-                <p class="service__desc">Improve your Product quality by using 3D scanner and precisely capture shape of object</p>
-                <a href="dimensional.html" class="btn btn__secondary btn__link">
-                  <i class="icon-arrow-right arrow-rounded"></i>
-                  <span>Read More</span>
-                </a>
-              </div><!-- /.service-content -->
-            </div><!-- /.service-item -->
-            <div class="service-item">
-              <div class="service__content">
-                <div class="service__icon">
-                  <img src="assets/images/AHS/reverse.jpg" alt="client">
-                </div><!-- /.service__icon -->
-                <h4 class="service__title">Reverse Engineering</h4>
-                <p class="service__desc">Utilize our Reverse engineering services</p>
-                <a href="reverse.html" class="btn btn__secondary btn__link">
-                  <i class="icon-arrow-right arrow-rounded"></i>
-                  <span>Read More</span>
-                </a>
-              </div><!-- /.service-content -->
-            </div><!-- /.service-item -->
-            <div class="service-item">
-              <div class="service__content">
-                <div class="service__icon">
-                  <img src="assets/images/AHS/training.jpg" alt="client">
-                </div><!-- /.service__icon -->
-                <h4 class="service__title">Training</h4>
-                <p class="service__desc">Offline CMM Programming,Get Offline CMM Programming from the industry experts with more than 15 years of experience</p>
-                <a href="training.html" class="btn btn__secondary btn__link">
-                  <i class="icon-arrow-right arrow-rounded"></i>
-                  <span>Read More</span>
-                </a>
-              </div><!-- /.service-content -->
-            </div><!-- /.service-item -->
-            <div class="service-item">
-              <div class="service__content">
-                <div class="service__icon">
-                  <img src="assets/images/AHS/ctt.jpg" alt="client">
-                </div><!-- /.service__icon -->
-                <h4 class="service__title">CT Anaylysis</h4>
-                <p class="service__desc">Utilize our CT Analysis services</p>
-                <a href="Analyse.html" class="btn btn__secondary btn__link">
-                  <i class="icon-arrow-right arrow-rounded"></i>
-                  <span>Read More</span>
-                </a>
-              </div><!-- /.service-content -->
-            </div><!-- /.service-item -->
-        
-          </div><!-- /.carousel -->
-        </div><!-- /.col-lg-12 -->
-      </div><!-- /.row -->
-  </div><!-- /.container -->
-  </section><!-- /.Services Carousel -->
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo.png" class="logo" alt="Logo">
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
 
-  <!-- =====================
-       video Banner
-    ======================== -->
-  <section id="videoBanner" class="video-banner video-banner-layout2 bg-overlay">
-    <div class="bg-img"><img src="assets/images/AHS/last.png" alt="background"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-          <div class="video__btn text-center">
-            <a class="popup-video" href="https://www.youtube.com/watch?4=&v=TKnufs85hXk">
-              <span class="video__player-animation"></span>
-              <span class="video__player-animation video__player-animation-2"></span>
-              <div class="video__player">
-                <i class="fa fa-play"></i>
-              </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                   
+                        <li >
+                            <a href="index.html" style="color: #4b65ac;">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" >About</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown" >Service</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Dimensional.html">Dimensional Inspection</a></li>
+                                <li><a href="reverse.html">Reverse Engineering</a></li>
+                              <li><a href="training.html">Training</a></li>
+                                <li><a href="ctt.html">CT Analysis</a></li>
+                                 <li><a href="manufacture.html">Manufacture Process</a></li>
+                            </ul>
+                        </li>
+                    
+                        <li>
+                            <a href="Gallery.html">Gallery</a>
+                        </li> 
+                     
+                     
+                        <li>
+                            <a href="contact.html">contact</a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+
+        </nav>
+        <!-- End Navigation -->
+
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Banner 
+    ============================================= -->
+    <div class="banner-area">
+        <div id="bootcarousel" class="carousel text-center inc-top-heading slide carousel-fade animate_text" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner text-light carousel-zoom">
+                <div class="item active">
+                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/aahs/ind2.png); "></div>
+                    <div class="box-table shadow dark">
+                        <div class="box-cell">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="content">
+                                            <h2 data-animation="animated slideInRight">Delivering innovative and precise 3D engineering solutions for advanced manufacturing and design.</h2>
+                                            <p data-animation="animated slideInUp">
+                                                3D Scanning–Industrial Applications
+                                            </p>
+                                            <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="about.html">Learn More</a>
+                                            <a data-animation="animated slideInUp" class="btn btn-light border btn-md " style="background-color: #FFD700;" href="Dimensional.html">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/aahs/ind1.png);"></div>
+                    <div class="box-table shadow dark">
+                        <div class="box-cell">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="content">
+                                            <h2 data-animation="animated slideInRight">Expert 3D engineering services for precise and efficient project execution. </h2>
+                                            <p data-animation="animated slideInUp">
+                                                High precision for demanding application
+                                            </p>
+                                            <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="Dimensional.html">View Setvice</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/aahs/ind3.png);"></div>
+                    <div class="box-table shadow dark">
+                        <div class="box-cell">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <div class="content">
+                                            <h2 data-animation="animated slideInRight">Transforming concepts into reality with advanced 3D engineering expertise.</h2>
+                                            <p data-animation="animated slideInUp">
+                                                Reverse Engineering
+                                            </p>
+                                            <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="contact.html">Contact Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Wrapper for slides -->
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#bootcarousel" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+                <span class="sr-only">Previous</span>
             </a>
-          </div><!-- /.video__btn -->
-        </div><!-- /.col-lg-12 -->
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-  </section><!-- /.videoBanner -->
-
-
-
-
-  <!-- =========================
-           Banner 2
-     =========================== -->
-  <section id="banner2" class="banner banner-2 bg-overlay bg-overlay-theme-2 bg-parallax pt-120 pb-0">
-    <div class="bg-img"><img src="assets/images/banners/3.jpg" alt="background"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-7">
-          <form class="contact__form-panel mr-50">
+            <a class="right carousel-control" href="#bootcarousel" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!-- End Banner -->
+    <!-- Start Services
+    ============================================= -->
+    <div class="services-area inc-icon less-info bg-gray  bottom-less" style="padding-top: 40px; padding-bottom: 40px;">
+        <div class="container">
             <div class="row">
-              <div class="col-sm-12 contact__form-panel-header">
-                <h4>Get In Touch</h4>
-           
-              </div>
-              <div class="col-sm-6 col-md-6 col-lg-6">
-                <div class="form-group"><input type="text" class="form-control" placeholder="Name"></div>
-              </div><!-- /.col-lg-6 -->
-              <div class="col-sm-6 col-md-6 col-lg-6">
-                <div class="form-group"><input type="email" class="form-control" placeholder="Email"></div>
-              </div><!-- /.col-lg-6 -->
-              <div class="col-sm-6 col-md-6 col-lg-6">
-                <div class="form-group"><input type="text" class="form-control" placeholder="Phone"></div>
-              </div><!-- /.col-lg-6 -->
-              <div class="col-sm-6 col-md-6 col-lg-6">
-                <div class="form-group form-group-select">
-                  <select class="form-control">
-                    <option>Select Your Service</option>
-                    <option>Dimensional Inspection</option>
-                    <option>Reverse Engineering</option>
-                    <option>Training</option>
-                    <option>CT Anaylysis</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-sm-12 col-md-12 col-lg-12">
-                <div class="form-group">
-                  <textarea class="form-control" placeholder="Message here"></textarea>
-                </div>
-              </div><!-- /.col-lg-12 -->
-              <div class="col-sm-12 col-md-12 col-lg-12">
-                <button type="submit" class="btn btn__primary btn__block">Submit Request</button>
-              </div><!-- /.col-lg-12 -->
-            </div><!-- /.row -->
-          </form><!-- /.contact__form-panel -->
-        </div><!-- /.col-lg-7 -->
-        <div class="col-sm-12 col-md-12 col-lg-5">
-          <div class="testimonials testimonials-white">
-            <h4 class="testimonials__heading color-white">testimonials</h4>
-            <div class="carousel owl-carousel carousel-arrows" data-slide="1" data-slide-md="1" data-slide-sm="1"
-              data-autoplay="true" data-nav="true" data-dots="false" data-space="0" data-loop="true" data-speed="800">
-              <!-- Testimonial #1 -->
-              <div class=" testimonial-item">
-                <div class="testimonial__content">
-                  <p style="color: #000;">The best CMM Zeiss Calypso Software training in the industry.The experience of Sunil Kumar Sir helps to easily understand each and every concept. The training staff Chetankumar sir is also good experienced which helps to learn the CMM Concepts at its best.Thank You for providing the opportunity to me.</p>
-                </div><!-- /.testimonial-content -->
-                <div class="testimonial__meta">
-                
-                  <h5 class="testimonial__meta-title">Atish Hirekodi</h5>
-       
-                </div><!-- /.testimonial-meta -->
-              </div><!-- /. testimonial-item -->
-              <!-- Testimonial #2 -->
-              <div class=" testimonial-item">
-                <div class="testimonial__content">
-                  <p style="color: #000;">Happy to share my training experience with AHS3D. The training which we got from Sunil sir was simply awesome. The team which he has was a very good team which helps us to understand or to interpret the concepts very easily. No one in our current industries would dare to give cmm machine for new commerce but this AHS3D does . And finally all the best for your future sir hope to see you and your organization in a better position which should be helpful for all the individuals like us
-                    Like</p>
-                </div><!-- /.testimonial-content -->
-                <div class="testimonial__meta">
-                
-                  <h5 class="testimonial__meta-title">Pyla Vinod</h5>
-  
-                </div><!-- /.testimonial-meta -->
-              </div><!-- /. testimonial-item -->
-            </div><!-- /.carousel -->
-          </div><!-- /.testimonials -->
-        </div><!-- /.col-lg-5 -->
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-  </section><!-- /. Banner 2 -->
+                <div class="services-items text-center">
+                    <!-- Single Item -->
+                    <div class="col-md-3 col-sm-6 equal-height">
+                     <h3 style="text-align: left;">Welcome to
+                      <span style="color: #f7c02d;"> AHS3D Engineering</span> </h3>
+                      <p style="text-align: left;">Welcome to AHS3D Engineering Pvt Ltd. We specialize in transforming your ideas into reality with innovative 3D engineering services. Our dedicated team excels in 3D modeling, simulation, prototyping, and product development, ensuring precision and quality at every stage.
 
-
-
-  <a href="https://api.whatsapp.com/send?phone=+919900084339&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
-    <i class="fa fa-whatsapp my-float"></i>
-    </a>
-
-  <!-- ========================
-      Footer
-    ========================== -->
-  <footer id="footer" class="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-4 footer__widget footer__widget-about mb-30">
-            <div class="footer__widget-content">
-              <img src="assets/images/logo/logo-footer.png" alt="logo">
-              <p>We are based out in Bangalore started in 2018. We Aim to fill the gap in current inspection & Engineering technologies. We have expertise in creating inspection reports, CAD Design, CAD models comparison from 3D scanned data to actual product using inspection software.</p>
-              <a href="#" class="btn btn__primary btn__link btn__hover2">
-                <i class="icon-arrow-right arrow-rounded"></i>
-                <span>Request A Quote</span>
-              </a>
+                      </p>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-3 col-sm-6 equal-height">
+                        <div class="item">
+                            <a href="#">
+                                <i>
+                                    <img src="assets/img/aahs/icn.png  " alt="Thumb"> 
+                                </i>
+                                <h4>Innovative 3D Design</h4>
+                            </a><br>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-3 col-sm-6 equal-height">
+                        <div class="item">
+                            <a href="#">
+                                <i>
+                                    <img src="assets/img/aahs/icn3.png  " alt="Thumb"> 
+                                </i>
+                                <h4>Creative Visionaries</h4>
+                            </a><br>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-3 col-sm-6 equal-height">
+                        <div class="item">
+                            <a href="#">
+                                <i>
+                                    <img src="assets/img/aahs/icn2.png  " alt="Thumb"> 
+                                </i>
+                                <h4>Leading Industry Experts</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>  
             </div>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-sm-6 col-md-6 col-lg-4 footer__widget footer__widget-nav" style="color: #000;">
-            <h6 class="footer__widget-title" style="color: #000;">Important Link</h6>
-            <div class="footer__widget-content" >
-              <nav>
-                <ul class="list-unstyled" >
-                  <li><a href="dimensional.html">Dimensional Inspection</a></li>
-                  <li><a href="reverse.html">Reverse Engineering</a></li>
-                  <li><a href="training.html">Training</a></li>
-                  <li><a href="Analyse.html">CT Anaylysis</a></li>
-            
-              </nav>
-            </div><!-- /.footer-widget-content -->
-          </div><!-- /.col-lg-2 -->
-          <div class="col-sm-6 col-md-6 col-lg-4 footer__widget footer__widget-text">
-            <h6 class="footer__widget-title">Quick Contact</h6>
-            <div class="footer__widget-content">
-              <p><span><b>Email: </b></span><br><a href="mailto:Info@3dengg.in">Info@3dengg.in</a></p>
-           <p><span><b>Phone:</b></span> <br><a href="tel:+919900084339">+91 99000 84339<br>
-            +91 9880464433</a></p>
-              <p><span><b>Address:</b></span><br>Papareddipalya Annapurneshwari Nagar Bengaluru</p>
-              <ul class="social__icons list-unstyled mt-30 mb-30">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              </ul>
-            </div><!-- /.footer-widget-content -->
-          </div><!-- /.col-lg-3 -->
+        </div>
+    </div>
+    <!-- End Services -->
+
+
+        <!-- Start Features
+    ============================================= -->
+    <div class="features-area" style="margin-top: 40px ; ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 appoinment">
+                    <div class="appoinment-box">
+                        <div class="heading">
+                            <h4></h4>
+                            <h2>Get A Quote</h2>
+                        </div>
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input class="form-control" id="f-name" name="f-name" placeholder="First Name" type="text">
+                                    </div>
+                                </div>
+                              
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input class="form-control" id="date" name="Email" placeholder="Email" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input class="form-control" id="date" name="Email" placeholder="Date" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <select>
+                                            <option value="1">Service</option>
+                                            <option value="2">Dimensional Inspection</option>
+                                            <option value="3">Reverse Engineering</option>
+                                            <option value="3">Training</option>
+                                            <option value="3">CT Analysis</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-12">
+                                    <div class="form-group comments">
+                                        <textarea class="form-control" id="comments" name="comments" placeholder="Tell Us About Project *"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" name="submit" id="submit">
+                                        Submit Query <i class="fa fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-7 features-items">
+                    <div class="site-heading text-center">
+                        <h2>Latest <span>Project</span></h2>
+                       
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            
+                           <!-- Single Item -->
+                        <div class="item">
+                            <div class="info">
+                             
+                                <div class="overlay" style="margin-bottom: 20px;">
+                                    <img src="assets/img/aahs/ser1.png  " alt="Thumb"> 
+                                </div>
+                                <h4 style="text-align: center;">
+                                    <a href="training.html">Dimensional Inspection</a>
+                                </h4>
+                                <p style="text-align: center; padding-bottom: 20px;"> <a class="btn btn-theme border circle btn-md" href="training.html">Read More</a></p>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        </div>
+                        <div class="col-md-6">
+                          <!-- Single Item -->
+                          <div class="item">
+                            <div class="info">
+                           
+                                <div class="overlay"  style="margin-bottom: 20px;">
+                                    <img src="assets/img/aahs/serv2.png" alt="Thumb"> 
+                                </div>
+                                <h4 style="text-align: center;">
+                                    <a href="training.html">Reverse Engineering</a>
+                                </h4>
+                              <p style="text-align: center;  padding-bottom: 20px;">  <a class="btn btn-theme border circle btn-md" href="training.html">Read More</a></p>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Single Item -->
+                            <div class="item">
+                              <div class="info">
+                               
+                                  <div class="overlay"  style="margin-bottom: 20px;">
+                                      <img src="assets/img/aahs/Untitled-1.png" alt="Thumb"> 
+                                  </div>
+                                  <h4 style="text-align: center;" >
+                                    <a href="training.html">Training</a>
+                                </h4>
+                                <p style="text-align: center;"> <a class="btn btn-theme border circle btn-md" href="training.html">Read More</a></p>
+                              </div>
+                          </div>
+                          <!-- End Single Item -->
+                          
+                          </div>
+                          <div class="col-md-6">
+                            <!-- Single Item -->
+                            <div class="item">
+                              <div class="info">
+                                
+                                  <div class="overlay"  style="margin-bottom: 20px;">
+                                      <img src="assets/img/aahs/serv4.png" alt="Thumb"> 
+                                  </div>
+                                  <h4 style="text-align: center;">
+                                    <a href="training.html">CT Analysis</a>
+                                </h4>
+                                <p style="text-align: center;">  <a class="btn btn-theme border circle btn-md" href="training.html">Read More</a></p>
+                              </div>
+                          </div>
+                          <!-- End Single Item -->
+                          
+                          </div>
+                         
+                  
+                </div> <br><br>
+            </div>
+        </div>
+    </div>
+    <!-- End Features -->
+
+      <!-- Start Fun Factor
+    ============================================= -->
+    <div class="fun-fact-area default-padding shadow light text-center bg-fixed text-light" style="background-image: url(assets/img/aahs/fefe.png);" >
+        <div class="container" >
+            <div class="row" style="margin-bottom: 90px;">
+                <div class="col-md-3 col-sm-6 item">
+                    <div class="fun-fact">
+                        <i>
+                            <img src="assets/img/aahs/11.png" alt="Thumb"> 
+                        </i>
+                        <div class="timer" data-to="230" data-speed="5000"></div>
+                        <span class="medium">Year of Experience</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 item">
+                    <div class="fun-fact">
+                        <i>
+                            <img src="assets/img/aahs/22.png" alt="Thumb"> 
+                        </i>
+                        <div class="timer" data-to="89" data-speed="5000"></div>
+                        <span class="medium">Successfull Projects</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 item">
+                    <div class="fun-fact">
+                        <i>
+                            <img src="assets/img/aahs/33.png" alt="Thumb"> 
+                        </i>
+                        <div class="timer" data-to="50" data-speed="5000"></div>
+                        <span class="medium">Engineers And workers</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 item">
+                    <div class="fun-fact">
+                        <i>
+                            <img src="assets/img/aahs/44.png" alt="Thumb"> 
+                        </i>
+                        <div class="timer" data-to="2348" data-speed="5000"></div>
+                        <span class="medium">Engineering Services</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Fun Factor -->
+
+       <!-- Start About
+    ============================================= -->
+    <div class="about-area default-padding chose-us-area" style="padding: 40px; ;">
+        <div class="container">
+            <div class="row">
+                <div class="about-items" >
+                    <div class="col-md-6 info"  >
+                        <h4>About Us</h4>
+                        <p>
+                            We are based out in Bangalore started in 2018. We Aim to fill the gap in current inspection & Engineering technologies. We have expertise in creating inspection reports, CAD Design, CAD models comparison from 3D scanned data to actual product using inspection software
+                           </p>
+                           <ul >
+                            <li>
+                                <div class="info">
+                                    <h6>3D Scanning–Industrial Applications </h6>
+                                   
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <h6>Reverse Engineering </h6>
+                                   
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <h6>High precision for demanding application </h6>
+                                   
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <h6>Surface Roughness Tester </h6>
+                                   
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <h6>Contour Profile Measurement </h6>
+                                   
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info">
+                                    <h6>High precision for demanding application </h6>
+                                   
+                                </div><br>
+                            </li>
+                            </ul>
+                            <a class="btn btn-theme border circle btn-md" href="about.html">Read More</a>
+                    </div>
+                    <div class="col-md-6 tabs-items">
+                        <img src="assets/img/aahs/aboutt.png" alt="Thumb">  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+
+ 
+
+
+
+
+
+      <!-- Start Gallery
+    ============================================= -->
+    <div class="gallery-area " style="margin-top: 30px; margin-bottom: 30px;">
+        <div class="container">
+            <div class="site-heading text-center">
+                <h2>Latest <span>Project</span></h2>
+               
+            </div>
+            <div class="gallery-items-area text-center">
+                <div class="row">
+                    <div class="col-md-12 gallery-content">
+                        <div class="mix-item-menu text-center">
+                            <button class="active" data-filter="*">All</button>
+                            <button data-filter=".development">Dimensional Inspection</button>
+                            <button data-filter=".consulting">Reverse Engineering</button>
+                            <button data-filter=".finance">Training</button>
+                            <button data-filter=".branding"> CT Analysis</button>
+                        </div>
+                        <!-- End Mixitup Nav-->
+
+                        <div class="row magnific-mix-gallery text-center masonary">
+                            <div id="portfolio-grid" class="gallery-items col-4">
+                                <!-- Single Item -->
+                                <div class="pf-item development capital">
+                                    <div class="effect-box">
+                                        <img src="assets/img/aahs/Artboard 1.png" alt="thumb">
+                                        <div class="info">
+                                          <h4><a href="#">AHS3D</a></h4>
+                                          <a href="assets/img/aahs/Artboard 1.png" class="item popup-link"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                <!-- Single Item -->
+                                <div class="pf-item consulting branding">
+                                    <div class="effect-box">
+                                        <img src="assets/img/aahs/Artboard 2.png" alt="thumb">
+                                        <div class="info">
+                                          <h4><a href="#">AHS3D</a></h4>
+                                          <a href="assets/img/aahs/Artboard 2.png" class="item popup-link"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                <!-- Single Item -->
+                                <div class="pf-item consulting finance">
+                                    <div class="effect-box">
+                                        <img src="assets/img/aahs/Artboard 3.png" alt="thumb">
+                                        <div class="info">
+                                          <h4><a href="#">AHS3D</a></h4>
+                                          <a href="assets/img/aahs/Artboard 3.png" class="item popup-link"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                <!-- Single Item -->
+                                <div class="pf-item finance">
+                                    <div class="effect-box">
+                                        <img src="assets/img/aahs/Artboard 21.png" alt="thumb">
+                                        <div class="info">
+                                          <h4><a href="#">AHS3D</a></h4>
+                                          <a href="assets/img/aahs/Artboard 21.png" class="item popup-link"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                <!-- Single Item -->
+                                <div class="pf-item capital development">
+                                    <div class="effect-box">
+                                        <img src="assets/img/aahs/Artboard 5.png" alt="thumb">
+                                        <div class="info">
+                                          <h4><a href="#">AHS3D</a></h4>
+                                          <a href="assets/img/aahs/Artboard 5.png" class="item popup-link"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                <!-- Single Item -->
+                                <div class="pf-item consulting branding">
+                                    <div class="effect-box">
+                                        <img src="assets/img/aahs/Artboard 6.png" alt="thumb">
+                                        <div class="info">
+                                          <h4><a href="#">AHS3D</a></h4>
+                                          <a href="assets/img/aahs/Artboard 6.png" class="item popup-link"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single Item -->
+                                <!-- Single Item -->
+                                <div class="pf-item consulting finance">
+                                    <div class="effect-box">
+                                        <img src="assets/img/aahs/Artboard 7.png" alt="thumb">
+                                        <div class="info">
+                                          <h4><a href="#">AHS3D</a></h4>
+                                          <a href="assets/img/aahs/Artboard 7.png" class="item popup-link"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                                <!-- Single Item -->
+                                <div class="pf-item finance">
+                                    <div class="effect-box">
+                                        <img src="assets/img/aahs/Artboard 8.png" alt="thumb">
+                                        <div class="info">
+                                          <h4><a href="#">AHS3D</a></h4>
+                                          <a href="assets/img/aahs/Artboard 8.png" class="item popup-link"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Item -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Gallery -->
+
+       <!-- Start Blog 
+    ============================================= -->
+    <div class="blog-area " style="margin-top: 30px;margin-bottom: 30px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <h2>Recent <span>Blog</span></h2>
+                        <p>
+                            At AHS3D Engineering , we are revolutionizing the way industries approach engineering challenges. With our cutting-edge 3D printing technology, we provide tailored solutions that enhance precision, efficiency, and innovation.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="blog-items">
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="assets/img/aahs/450x340.jpg" alt="Thumb">
+                                    <div class="post-type">
+                                        <i class="fas fa-images"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="info">
+                             
+                                <h4  style="text-align: center;">
+                                    <a href="#">Dimensional Inspection</a>
+                                </h4>
+                              
+                               <p  style="text-align: center;"> <a class="btn btn-theme circle border btn-sm" href="#">Read More <i class="fas fa-angle-right"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="assets/img/aahs/450x340 (2).png" alt="Thumb">
+                                    <div class="post-type">
+                                        <i class="fas fa-video"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="info">
+                             
+                                <h4 style="text-align: center;">
+                                    <a href="#">Reverse Engineering</a>
+                                </h4>
+                               
+                                <p  style="text-align: center;"> <a class="btn btn-theme circle border btn-sm" href="#">Read More <i class="fas fa-angle-right"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="assets/img/aahs/450x340(3).png" alt="Thumb">
+                                    <div class="post-type">
+                                        <i class="fas fa-image"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="info">
+                              
+                                <h4  style="text-align: center;">
+                                    <a href="#" >CT Analysis</a>
+                                </h4>
+                               
+                                <p  style="text-align: center;"> <a class="btn btn-theme circle border btn-sm" href="#">Read More <i class="fas fa-angle-right"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Blog -->
   
-       
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </div><!-- /.footer-top -->
-    <div class="footer-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="footer__contact">
-              <div class="footer__contact-item">
-                <div class="footer__contact-item-icon">
-                  <i class="icon-phone"></i>
-                </div><!-- /.footer__contact-item-icon -->
-                <div class="footer__contact-item-text">
-                  <span>Call Us:</span>
-                  <strong><a href="tel:00123968574">+91 9900084339</a></strong>
-                </div><!-- /.footer__contact-item-text -->
-              </div><!-- /.footer__contact-item -->
-              <div class="footer__contact-item">
-                <div class="footer__contact-item-icon">
-                  <i class="icon-envelope"></i>
-                </div><!-- /.footer__contact-item-icon -->
-                <div class="footer__contact-item-text">
-                  <span>Email Us:</span>
-                  <strong><a href="mailto:Info@3dengg.in">Info@3dengg.in</a></strong>
-                </div><!-- /.footer__contact-item-text -->
-              </div><!-- /.footer__contact-item -->
-              <div class="footer__contact-item">
-                <div class="footer__contact-item-icon">
-                  <i class="icon-clock"></i>
-                </div><!-- /.footer__contact-item-icon -->
-                <div class="footer__contact-item-text">
-                  <span>Opening Hours:</span>
-                  <strong>Mon-Fri: 8am – 7pm</strong>
-                </div><!-- /.footer__contact-item-text -->
-              </div><!-- /.footer__contact-item -->
-              <div class="footer__contact-item">
-                <a href="#" class="btn btn__block btn__primary">Contact Now</a>
-              </div><!-- /.footer__contact-item -->
-            </div><!-- /.footer__contact -->
-            <div class="footer__copyright text-center" style="color: #000;">
-              <span> &copy; 2024 Bright Ads Digital India Pvt Ltd.
-           
-              </span>
-            </div><!-- /.Footer-copyright -->
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </div><!-- /.Footer-bottom -->
-  </footer><!-- /.Footer -->
-  <button id="scrollTopBtn"><i class="fa fa-long-arrow-up"></i></button>
-  </div><!-- /.wrapper -->
 
-  <script src="assets/js/jquery-3.3.1.min.js"></script>
-  <script src="assets/js/plugins.js"></script>
-  <script src="assets/js/main.js"></script>
+    <!-- Start Features
+    ============================================= -->
+    <div class="features-area default-padding bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 appoinment">
+                    <iframe width="100%" height="645" src="https://www.youtube.com/embed/McELJLbsNG8?si=QU4EOlN_C4Y39ZQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="col-md-6 features-items">
+                    <div class="row">
+                        <div >
+                            <div class="site-heading text-center">
+                                <h2 style="margin-top: 30px;">Why <span>Choose</span> Us</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i >
+                                    <img src="assets/img/aahs/icn4.png" alt="Thumb" style="width: 30px; height: 30px;">
+                                </i>
+                            </div>
+                            <div class="info">
+                                <h4>  Driven By Quality</h4>
+                                <p>
+                                    We work across the spectrum of industry to solve quality challenges and help companies grow with capacity and capability by providing engineering services.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i >
+                                    <img src="assets/img/aahs/icn4.png" alt="Thumb" style="width: 30px; height: 30px;">
+                                </i>
+                            </div>
+                            <div class="info">
+                                <h4>Get It Done From The Best</h4>
+                                <p>
+                                    We have the best Industry experts working in our company,who can help you in each and every step of Metrolgy,Reverse Engineering, Design & other related activities A great opportunity to learn from best of the industry expert.
+
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i >
+                                    <img src="assets/img/aahs/icn4.png" alt="Thumb" style="width: 30px; height: 30px;">
+                                </i>
+                            </div>
+                            <div class="info">
+                                <h4>AHS3D Engineering</h4>
+                                <p>
+                                    We provide Engineering Service to customers around the globe who are developing, expanding and supplementing their quality and engineering resources. We help customers to bring quality with robust design at least cost.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                
+                </div>
+            </div><br>
+        </div>
+    </div>
+    <!-- End Features -->
+
+ 
+
+
+
+
+
+      
+    <!-- Start Testimonials 
+    ============================================= -->
+    <div class="testimonials-area carousel-shadow bg-gray" style=" margin-bottom: 30px; padding-top: 40px; ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <h2 style="text-align: center;"><span ><span style="color: #4285f4;">G</span><span style="color: #EA4335;">o</span><span style="color: #FBBC05;">o</span><span style="color: #4285f4">g</span><span style="color: #34A853;">l</span><span style="color: #EA4335;">e</span></span> Reviews</h2>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="testimonial-items testimonial-carousel owl-carousel owl-theme">
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="content">
+                                <p>
+                                    The best CMM Zeiss Calypso Software training in the industry.The experience of Sunil Kumar Sir helps to easily understand each and every concept. The training staff Chetankumar sir is also good experienced which helps to learn the CMM Concepts at its best.Thank You for providing the opportunity to me.
+                                 </p>
+                            </div>
+                            <div class="provider">
+                                <div class="thumb">
+                                    <img src="assets/img/aahs/pic.png" alt="Thumb">
+                                </div>
+                                <div class="info">
+                                    <h4>Angle Natasha</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="content">
+                                <p>
+                                    Happy to share my training experience with AHS3D. The training which we got from Sunil sir was simply awesome. The team which he has was a very good team which helps us to understand or to interpret the concepts very easily. No one in our current industries would dare to give cmm machine . 
+                                
+                                    </p>
+                            </div>
+                            <div class="provider">
+                                <div class="thumb">
+                                    <img src="assets/img/aahs/pic3.png" alt="Thumb">
+                                </div>
+                                <div class="info">
+                                    <h4>John Abraham</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="content">
+                                <p>
+                                    The best CMM Zeiss Calypso Software training in the industry.The experience of Sunil Kumar Sir helps to easily understand each and every concept. The training staff Chetankumar sir is also good experienced which helps to learn the CMM Concepts at its best.Thank You for providing the opportunity to me.
+                                </p>
+                            </div>
+                            <div class="provider">
+                                <div class="thumb">
+                                    <img src="assets/img/aahs/pic2.png" alt="Thumb">
+                                </div>
+                                <div class="info">
+                                    <h4>Kriti Sairi</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Testimonials -->
+ 
+  
+
+
+
+    <a href="https://api.whatsapp.com/send?phone=+919900084339&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+        </a>
+ 
+    <!-- Start Footer 
+    ============================================= -->
+    <footer >
+        <div class="container" >
+            <div class="row">
+                <div class="f-items default-padding">
+
+                    <!-- Single Item -->
+                    <div class="col-md-4 equal-height item">
+                        <div class="f-item">
+                            <h4>Get in Touch</h4>
+                            <!-- <h5>Subscribe Newsletter</h5>
+                            <form action="#">
+                                <div class="input-group stylish-input-group">
+                                    <input type="email" name="email" class="form-control" placeholder="Enter your e-mail here">
+                                    <button type="submit">
+                                        <i class="fa fa-paper-plane"></i>
+                                    </button>  
+                                </div>
+                            </form> -->
+                            <div class="opening-info">
+                                <h5>Opening Hours</h5>
+                                <ul>
+                                    <li> <span> Mon - Sat :  </span>
+                                      <div class="pull-right"> 6.00 am - 10.00 pm </div>
+                                    </li>
+                                  
+                                    <li> <span> Sun : </span>
+                                      <div class="pull-right closed"> Closed </div>
+                                    </li>
+                                </ul>
+                            </div><br>  
+                            <div class="sidebar-item social-sidebar">
+                                <div class="title" style="padding-bottom: 10px;">
+                                    <h4>follow us</h4>
+                                </div>
+                                <div class="sidebar-info">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="#">
+                                                <i class="fab fa-google-plus-g"></i>
+                                            </a>
+                                        </li>
+                                       
+                                        <li class="g-plus">
+                                            <a href="#">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 equal-height item">
+                        <div class="f-item link">
+                            <h4>Our Service</h4>
+                             <ul>
+                                <li>
+                                    <a href="Dimensional.html"><i class="fas fa-arrow-right"></i> Dimensional Inspection
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="reverse.html"><i class="fas fa-arrow-right"></i> Reverse Engineering</a>
+                                </li>
+                                <li>
+                                    <a href="training.html"><i class="fas fa-arrow-right"></i>Training</a>
+                                </li>
+                                <li>
+                                    <a href="ctt.html"><i class="fas fa-arrow-right"></i> CT Analysis</a>
+                                </li>
+                          
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 equal-height item">
+                        <div class="f-item twitter-widget f-item contact">
+                            <h4 >Contact info</h4>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-phone"></i> 
+                                  <p>Phone <span><a href="tel:+919900084339">+91 99000 84339, 
+                                        +91 9880464433</span></a></p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelope"></i> 
+                                    <p>Email <span><a href="mailto:Info@3dengg.in">Info@3dengg.in</a></span></p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-map"></i> 
+                                   <p>Office  <a href="https://maps.app.goo.gl/3BZxnjbbTvM2N1BGA"><span>Papareddipalya Annapurneshwari Nagar Bengaluru</span></a></p>
+                                </li>
+                            </ul>
+                        
+                         
+                        </div>
+                     
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+            </div>
+        </div>
+        <!-- Start Footer Bottom -->
+        <div class="footer-bottom bg-dark text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; Copyright 2024. All Rights Reserved by <a href="#">AHS3D Engineering Pvt Ltd </a></p>
+                    </div>
+                    <div class="col-md-6 text-right link">
+                        <ul>
+                            <li>
+                                <a href="#">Terms of user</a>
+                            </li>
+                            <li>
+                                <a href="#">License</a>
+                            </li>
+                            <li>
+                                <a href="#">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Bottom -->
+    </footer>
+    <!-- End Footer -->
+
+    <!-- jQuery Frameworks
+    ============================================= -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/equal-height.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/modernizr.custom.13711.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/count-to.js"></script>
+    <script src="assets/js/YTPlayer.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/bootsnav.js"></script>
+    <script src="assets/js/main.js"></script>
+
+<script>
+    $(".clients-carousel").owlCarousel({
+  autoplay: true,
+  loop: true,
+  margin: 15,
+  dots: false,
+  slideTransition: "linear",
+  autoplayTimeout: 4500,
+  autoplayHoverPause: true,
+  autoplaySpeed: 4500,
+  responsive: {
+    0: {
+      items: 2
+    },
+    500: {
+      items: 3
+    },
+    600: {
+      items: 4
+    },
+    800: {
+      items: 4
+    },
+    1200: {
+      items: 4
+    }
+  }
+});
+
+</script>
 </body>
-
 </html>

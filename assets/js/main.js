@@ -1,189 +1,356 @@
-/*---------------------------
-      Table of Contents
-    --------------------
+/* ===================================================================
     
-    01- Mobile Menu
-    02- Sticky Navbar
-    03- Module Search 
-    04- Scroll Top Button
-    05- Set Background-img to section 
-    06- Add active class to accordions
-    07- Load More Items
-    08- Owl Carousel
-    09- Popup Video
-    10- CounterUp
-    11- portfolio Filtering and Sorting
-      
- ----------------------------*/
+    Author          : Valid Theme
+    Template Name   : MediHub - Medical & Health Template
+    Version         : 1.1
+    
+* ================================================================= */
 
-$(function () {
-
+(function($) {
     "use strict";
 
-    // Global variables
-    var $win = $(window);
+    $(document).on('ready', function() {
 
-    /*==========   Mobile Menu   ==========*/
-    var $navToggler = $('.navbar-toggler');
-    $navToggler.on('click', function () {
-        $(this).toggleClass('actived');
-    })
-    $navToggler.on('click', function () {
-        $('.navbar-collapse').toggleClass('menu-opened');
-    })
 
-    /*==========   Sticky Navbar   ==========*/
-    $win.on('scroll', function () {
-        if ($win.width() >= 992) {
-            var $navbar = $('.sticky-navbar');
-            if ($win.scrollTop() > 80) {
-                $navbar.addClass('fixed-navbar');
-            } else {
-                $navbar.removeClass('fixed-navbar');
-            }
-        }
-    });
-
-    /*==========   Scroll Top Button   ==========*/
-    var $scrollTopBtn = $('#scrollTopBtn');
-    // Show Scroll Top Button
-    $win.on('scroll', function () {
-        if ($(this).scrollTop() > 700) {
-            $scrollTopBtn.addClass('actived');
-        } else {
-            $scrollTopBtn.removeClass('actived');
-        }
-    });
-    // Animate Body after Clicking on Scroll Top Button
-    $scrollTopBtn.on('click', function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500);
-    });
-
-    /*==========   Set Background-img to section   ==========*/
-    $('.bg-img').each(function () {
-        var imgSrc = $(this).children('img').attr('src');
-        $(this).parent().css({
-            'background-image': 'url(' + imgSrc + ')',
-            'background-size': 'cover',
-            'background-position': 'center',
+        /* ==================================================
+            # Wow Init
+         ===============================================*/
+        var wow = new WOW({
+            boxClass: 'wow', // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset: 0, // distance to the element when triggering the animation (default is 0)
+            mobile: true, // trigger animations on mobile devices (default is true)
+            live: true // act on asynchronously loaded content (default is true)
         });
-        $(this).parent().addClass('bg-img');
-        $(this).remove();
-    });
+        wow.init();
 
-    /*==========   Add active class to accordions   ==========*/
-    $('.accordion__item-header').on('click', function () {
-        $(this).parent('.accordion-item').addClass('opened');
-        $(this).parent('.accordion-item').siblings().removeClass('opened');
-    })
-    $('.accordion__item-title').on('click', function (e) {
-        e.preventDefault()
-    });
 
-    /*==========   Load More Items  ==========*/
-    function loadMore(loadMoreBtn, loadedItem) {
-        $(loadMoreBtn).on('click', function (e) {
-            e.preventDefault();
-            $(this).fadeOut();
-            $(loadedItem).fadeIn();
-        })
-    }
+        /* ==================================================
+            # Smooth Scroll
+         ===============================================*/
+        $("body").scrollspy({
+            target: ".navbar-collapse",
+            offset: 200
+        });
+        $('a.smooth-menu').on('click', function(event) {
+            var $anchor = $(this);
+            var headerH = '75';
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top - headerH + "px"
+            }, 1500, 'easeInOutExpo');
+            event.preventDefault();
+        });
 
-    loadMore('.loadMoreBlog', '.hidden-blog-item');
-    loadMore('.loadMoreportfolio', '.portfolio-hidden > .portfolio-item');
 
-    /*==========   Owl Carousel  ==========*/
-    $('.carousel').each(function () {
-        $(this).owlCarousel({
-            nav: $(this).data('nav'),
-            dots: $(this).data('dots'),
-            loop: $(this).data('loop'),
-            margin: $(this).data('space'),
-            center: $(this).data('center'),
-            dotsSpeed: $(this).data('speed'),
-            autoplay: $(this).data('autoplay'),
-            transitionStyle: $(this).data('transition'),
-            animateOut: $(this).data('animate-out'),
-            animateIn: $(this).data('animate-in'),
-            autoplayTimeout: 15000,
+        /* ==================================================
+            # Banner Animation
+        ===============================================*/
+        function doAnimations(elems) {
+            //Cache the animationend event in a variable
+            var animEndEv = 'webkitAnimationEnd animationend';
+            elems.each(function() {
+                var $this = $(this),
+                    $animationType = $this.data('animation');
+                $this.addClass($animationType).one(animEndEv, function() {
+                    $this.removeClass($animationType);
+                });
+            });
+        }
+
+        //Variables on page load
+        var $immortalCarousel = $('.animate_text'),
+            $firstAnimatingElems = $immortalCarousel.find('.item:first').find("[data-animation ^= 'animated']");
+        //Initialize carousel
+        $immortalCarousel.carousel();
+        //Animate captions in first slide on page load
+        doAnimations($firstAnimatingElems);
+        //Other slides to be animated on carousel slide event
+        $immortalCarousel.on('slide.bs.carousel', function(e) {
+            var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
+            doAnimations($animatingElems);
+        });
+
+
+        /* ==================================================
+            # Equal Height Init
+        ===============================================*/
+        $(window).on('resize', function() {
+            $(".equal-height").equalHeights();
+        });
+
+        $(".equal-height").equalHeights().find("img, iframe, object").on('load', function() {
+            $(".equal-height").equalHeights();
+        });
+
+
+        /* ==================================================
+            # imagesLoaded active
+        ===============================================*/
+        $('#portfolio-grid,.blog-masonry').imagesLoaded(function() {
+
+            /* Filter menu */
+            $('.mix-item-menu').on('click', 'button', function() {
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({
+                    filter: filterValue
+                });
+            });
+
+            /* filter menu active class  */
+            $('.mix-item-menu button').on('click', function(event) {
+                $(this).siblings('.active').removeClass('active');
+                $(this).addClass('active');
+                event.preventDefault();
+            });
+
+            /* Filter active */
+            var $grid = $('#portfolio-grid').isotope({
+                itemSelector: '.pf-item',
+                percentPosition: true,
+                masonry: {
+                    columnWidth: '.pf-item',
+                }
+            });
+
+            /* Filter active */
+            $('.blog-masonry').isotope({
+                itemSelector: '.blog-item',
+                percentPosition: true,
+                masonry: {
+                    columnWidth: '.blog-item',
+                }
+            });
+
+        });
+
+
+         /* ==================================================
+            # Fun Factor Init
+        ===============================================*/
+        $('.timer').countTo();
+        $('.fun-fact').appear(function() {
+            $('.timer').countTo();
+        }, {
+            accY: -100
+        });
+        
+
+        /* ==================================================
+            # Youtube Video Init
+         ===============================================*/
+        $('.player').mb_YTPlayer();
+
+
+
+        /* ==================================================
+            # Magnific popup init
+         ===============================================*/
+        $(".popup-link").magnificPopup({
+            type: 'image',
+            // other options
+        });
+
+        $(".popup-gallery").magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true
+            },
+            // other options
+        });
+
+        $(".popup-youtube, .popup-vimeo, .popup-gmaps").magnificPopup({
+            type: "iframe",
+            mainClass: "mfp-fade",
+            removalDelay: 160,
+            preloader: false,
+            fixedContentPos: false
+        });
+
+        $('.magnific-mix-gallery').each(function() {
+            var $container = $(this);
+            var $imageLinks = $container.find('.item');
+
+            var items = [];
+            $imageLinks.each(function() {
+                var $item = $(this);
+                var type = 'image';
+                if ($item.hasClass('magnific-iframe')) {
+                    type = 'iframe';
+                }
+                var magItem = {
+                    src: $item.attr('href'),
+                    type: type
+                };
+                magItem.title = $item.data('title');
+                items.push(magItem);
+            });
+
+            $imageLinks.magnificPopup({
+                mainClass: 'mfp-fade',
+                items: items,
+                gallery: {
+                    enabled: true,
+                    tPrev: $(this).data('prev-text'),
+                    tNext: $(this).data('next-text')
+                },
+                type: 'image',
+                callbacks: {
+                    beforeOpen: function() {
+                        var index = $imageLinks.index(this.st.el);
+                        if (-1 !== index) {
+                            this.goTo(index);
+                        }
+                    }
+                }
+            });
+        });
+
+
+        /* ==================================================
+            # Doctor Carousel
+         ===============================================*/
+        $('.doctor-carousel').owlCarousel({
+            loop: false,
+            margin: 30,
+            nav: true,
+            navText: [
+                "<i class='fa fa-angle-left'></i>",
+                "<i class='fa fa-angle-right'></i>"
+            ],
+            dots: false,
+            autoplay: true,
             responsive: {
                 0: {
-                    items: 1,
+                    items: 1
                 },
-                400: {
-                    items: $(this).data('slide-sm'),
-                },
-                700: {
-                    items: $(this).data('slide-md'),
+                600: {
+                    items: 2
                 },
                 1000: {
-                    items: $(this).data('slide'),
+                    items: 3
                 }
             }
         });
-    });
 
-    // Owl Carousel With Thumbnails
-    $('.thumbs-carousel').owlCarousel({
-        thumbs: true,
-        thumbsPrerendered: true,
-        loop: true,
-        margin: 0,
-        autoplay: $(this).data('autoplay'),
-        nav: $(this).data('nav'),
-        dots: $(this).data('dots'),
-        dotsSpeed: $(this).data('speed'),
-        transitionStyle: $(this).data('transition'),
-        animateOut: $(this).data('animate-out'),
-        animateIn: $(this).data('animate-in'),
-        autoplayTimeout: 15000,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            }
-        }
-    });
 
-    /*==========  Popup Video  ==========*/
-    $('.popup-video').magnificPopup({
-        mainClass: 'mfp-fade',
-        removalDelay: 0,
-        preloader: false,
-        fixedContentPos: false,
-        type: 'iframe',
-        iframe: {
-            markup: '<div class="mfp-iframe-scaler">' +
-                '<div class="mfp-close"></div>' +
-                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-                '</div>',
-            patterns: {
-                youtube: {
-                    index: 'youtube.com/',
-                    id: 'v=',
-                    src: '//www.youtube.com/embed/%id%?autoplay=1'
+        /* ==================================================
+            # Services Carousel
+         ===============================================*/
+        $('.services-carousel').owlCarousel({
+            loop: false,
+            margin: 30,
+            nav: true,
+            navText: [
+                "<i class='fa fa-angle-left'></i>",
+                "<i class='fa fa-angle-right'></i>"
+            ],
+            dots: false,
+            autoplay: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
                 }
-            },
-            srcAction: 'iframe_src',
-        }
-    });
+            }
+        });
 
-    /*==========   counterUp  ==========*/
-    $(".counter").counterUp({
-        delay: 10,
-        time: 4000
-    });
+        /* ==================================================
+            # Testimonials Carousel
+         ===============================================*/
+        $('.testimonial-carousel').owlCarousel({
+            loop: false,
+            margin: 30,
+            nav: true,
+            navText: [
+                "<i class='fa fa-angle-left'></i>",
+                "<i class='fa fa-angle-right'></i>"
+            ],
+            dots: false,
+            autoplay: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items:2
+                }
+            }
+        });
 
-    /*==========   portfolio Filtering and Sorting  ==========*/
-    $("#filtered-items-wrap").mixItUp();
-    $(".portfolio-filter li a").on("click", function (e) {
-        e.preventDefault();
-    });
-});
+
+        /* ==================================================
+            # Health Tips Carousel
+         ===============================================*/
+        $('.tips-carousel').owlCarousel({
+            loop: false,
+            nav: true,
+            dots: false,
+            items: 1,
+            navText: [
+                "<i class='fa fa-angle-left'></i>",
+                "<i class='fa fa-angle-right'></i>"
+            ],
+        });
+
+
+        /* ==================================================
+            Preloader Init
+         ===============================================*/
+        $(window).on('load', function() {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");;
+        });
+
+
+        /* ==================================================
+            Nice Select Init
+         ===============================================*/
+        $('select').niceSelect();
+
+
+        /* ==================================================
+            Contact Form Validations
+        ================================================== */
+        $('.contact-form').each(function() {
+            var formInstance = $(this);
+            formInstance.submit(function() {
+
+                var action = $(this).attr('action');
+
+                $("#message").slideUp(750, function() {
+                    $('#message').hide();
+
+                    $('#submit')
+                        .after('<img src="assets/img/ajax-loader.gif" class="loader" />')
+                        .attr('disabled', 'disabled');
+
+                    $.post(action, {
+                            name: $('#name').val(),
+                            email: $('#email').val(),
+                            phone: $('#phone').val(),
+                            comments: $('#comments').val()
+                        },
+                        function(data) {
+                            document.getElementById('message').innerHTML = data;
+                            $('#message').slideDown('slow');
+                            $('.contact-form img.loader').fadeOut('slow', function() {
+                                $(this).remove()
+                            });
+                            $('#submit').removeAttr('disabled');
+                        }
+                    );
+                });
+                return false;
+            });
+        });
+
+    }); // end document ready function
+})(jQuery); // End jQuery
