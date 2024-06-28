@@ -729,7 +729,6 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
   font-weight: 700;
   padding-bottom: 20px;
   position: relative;
-  text-transform: uppercase;
 }
 
 .site-heading h4 {
@@ -2683,7 +2682,7 @@ body,
   top: 0;
   color: #f7c02d;
   font-weight: 600;
-  content: "\f5ae";
+  content: "\f00c";
   font-family: "Font Awesome 5 Free";
 }
 
@@ -3437,7 +3436,6 @@ body,
 }
 
 .chose-us-area .info h2 {
-  text-transform: uppercase;
   font-weight: 600;
   display: inline-block;
   margin-bottom: 20px;
@@ -4926,11 +4924,11 @@ body,
 }
 
 .sidebar-item.social-sidebar li.pinterest a {
-  background: #BD081C none repeat scroll 0 0;
+  background: #0077B5 none repeat scroll 0 0;
 }
 
 .sidebar-item.social-sidebar li.g-plus a {
-  background: #DB4437 none repeat scroll 0 0;
+  background: #0077B5 none repeat scroll 0 0;
 }
 
 .sidebar-item.social-sidebar li.linkedin a {
@@ -5983,4 +5981,26 @@ footer .footer-bottom .social li a:hover {
 
 .my-float{
 	margin-top:16px;
+}
+
+
+
+.linkedin-icon {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #0077B5;
+  padding: 10px;
+  border-radius: 90%;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.linkedin-icon:hover {
+  background-color: #0077B5;
+  transform: scale(1.1);
+}
+
+.linkedin-icon i {
+  font-size: 17px;
+  color: #fff; /* Ensure the icon text color is white */
 }
